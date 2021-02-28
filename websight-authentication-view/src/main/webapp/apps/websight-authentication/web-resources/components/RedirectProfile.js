@@ -2,6 +2,7 @@ import React from 'react';
 import { Profile as AtlaskitProfile, SignIn } from '@atlaskit/atlassian-navigation';
 import Popup from '@atlaskit/popup';
 import { LinkItem, MenuGroup, Section } from '@atlaskit/menu';
+import Tooltip from '@atlaskit/tooltip';
 import styled from 'styled-components';
 
 import authContextAware from 'websight-rest-atlaskit-client/AuthContextAware';
@@ -50,7 +51,11 @@ class Profile extends React.Component {
                         trigger={triggerProps => (
                             <AtlaskitProfile
                                 {...triggerProps}
-                                icon={<Icon className='material-icons'>account_circle</Icon>}
+                                icon={
+                                    <Tooltip hideTooltipOnClick={true} content={'Logged in as ' + authContext.userId}>
+                                        <Icon className='material-icons'>account_circle</Icon>
+                                    </Tooltip>
+                                }
                                 onClick={() => this.setState((prevState) => ({ isOpenForProfile: !prevState.isOpenForProfile }))}
                                 isSelected={isOpenForProfile}
                             />

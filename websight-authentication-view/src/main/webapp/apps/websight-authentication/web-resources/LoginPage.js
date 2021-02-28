@@ -37,7 +37,7 @@ const theme = generateTheme({
 });
 
 const HomeSection = () => (
-    <ProductHome icon={Logo} logo={Logo} />
+    <ProductHome icon={Logo} logo={Logo} href='/' />
 );
 
 export default class Login extends React.Component {

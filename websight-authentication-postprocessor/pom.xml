@@ -9,8 +9,8 @@
         <relativePath />
     </parent>
 
-    <artifactId>websight-authentication-service</artifactId>
-    <version>1.0.0</version>
+    <artifactId>websight-authentication-postprocessor</artifactId>
+    <version>1.0.1</version>
 
     <build>
         <plugins>
@@ -90,6 +90,7 @@
     </dependencies>
 
   <scm>
-    <tag>1.0.0</tag>
+    <tag>1.0.1</tag>
+    <developerConnection>scm:git:ssh://git@192.168.1.146:7999/ws/websight-authentication.git</developerConnection>
   </scm>
 </project>
